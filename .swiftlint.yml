@@ -1,0 +1,10 @@
+custom_rules:
+  restricted_api_usage:
+    name: "Restricted API Usage"
+    regex: "\\bRestrictedAPI\\b"
+    message: "RestrictedAPI は指定されたディレクトリ外では利用できません。"
+    severity: error
+    included:
+      - SampleRestrictedFileAccess/
+    excluded:
+      - SampleRestrictedFileAccess/CoreAPI/FeatureAPI/
